@@ -1,0 +1,216 @@
+# =============================================================================
+# RAG vs Fine-Tuning Research Project .gitignore
+# =============================================================================
+
+# Python
+# -------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# --------------------
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+rag_ft_env/
+.env
+.venv
+
+# Jupyter Notebook
+# ----------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# Research Data & Models
+# ----------------------
+# Large model files
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.ckpt
+
+# Datasets (keep small samples, ignore large downloads)
+datasets/
+data/raw/
+*.csv
+*.json.gz
+*.jsonl
+*.parquet
+*.arrow
+
+# Model outputs and checkpoints
+checkpoints/
+outputs/
+runs/
+logs/
+wandb/
+mlruns/
+
+# Fine-tuning specific
+FineTuning/fine_tuned_legal_mistral/
+FineTuning/processed_data/mistral_legal_qa/
+FineTuning/models/
+
+# RAG specific  
+RAG/vector_db/
+RAG/processed_docs/
+RAG/embeddings/
+RAG/chroma_db/
+
+# Vector databases
+*.faiss
+*.index
+*.pkl
+*.pickle
+
+# Temporary files
+# ---------------
+tmp/
+temp/
+.tmp/
+*.tmp
+*.log
+*.out
+
+# OS generated files
+# ------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+# ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Configuration files with secrets
+# --------------------------------
+config.json
+secrets.json
+.env.local
+.env.production
+api_keys.txt
+credentials.json
+
+# Hugging Face cache
+# ------------------
+.cache/
+.huggingface/
+transformers_cache/
+
+# Research outputs
+# ----------------
+results/
+figures/
+plots/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# Conference submission
+# --------------------
+paper_drafts/
+reviews/
+submission/
+*.tex
+*.bib
+*.aux
+*.bbl
+*.blg
+
+# Performance monitoring
+# ---------------------
+*.prof
+.coverage
+htmlcov/
+
+# Backup files
+# ------------
+*.bak
+*.backup
+*_backup.*
+*_old.*
+
+# Large files (use Git LFS if needed)
+# -----------------------------------
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# Keep these files
+# ----------------
+!requirements.txt
+!README.md
+!**/README.md
+!CONFERENCE_PAPER_GUIDE.md
+!LICENSE
+!.gitignore
+
+# Sample data (small files for testing)
+# --------------------------------------
+!samples/
+!examples/
+!test_data/
+
+# =============================================================================
+# Project-specific ignores
+# =============================================================================
+
+# Processed legal documents (too large for git)
+processed_legal_docs/
+legal_qa_pairs/
+embedding_cache/
+
+# Model evaluation results (keep summaries, ignore detailed logs)
+evaluation_logs/
+detailed_metrics/
+benchmark_results/
+
+# Experiment tracking
+experiment_*/
+ablation_*/
+hyperparameter_search/
+
+# Generated documentation
+docs/_build/
+site/
+
+# =============================================================================
+# Note: To track large files like trained models, consider using Git LFS:
+# git lfs track "*.bin"
+# git lfs track "*.safetensors"
+# ============================================================================= 
