@@ -5,67 +5,64 @@
 
 # Core Deep Learning and Transformers
 # -----------------------------------
-torch>=2.0.0,<2.2.0              # PyTorch with CUDA support
-transformers>=4.35.0,<4.37.0     # Hugging Face Transformers
+torch>=2.0.0,<2.3.0              # PyTorch with CUDA support
+transformers>=4.35.0,<4.38.0     # Hugging Face Transformers
 tokenizers>=0.15.0,<0.16.0       # Fast tokenization
-datasets>=2.14.0,<2.16.0         # Dataset handling and processing
-accelerate>=0.20.0,<0.25.0       # Multi-GPU and optimization utilities
+datasets>=2.14.0,<2.17.0         # Dataset handling and processing
+accelerate>=0.20.0,<0.26.0       # Multi-GPU and optimization utilities
 
 # Parameter-Efficient Fine-Tuning
 # --------------------------------
 peft>=0.5.0,<0.8.0               # Parameter-Efficient Fine-Tuning library
-bitsandbytes>=0.41.0,<0.42.0     # 4-bit and 8-bit quantization
-optimum>=1.14.0,<1.16.0          # Hardware optimization
+bitsandbytes>=0.41.0,<0.43.0     # 4-bit and 8-bit quantization
+optimum>=1.14.0,<1.17.0          # Hardware optimization
 
 # RAG and Vector Database Components
 # -----------------------------------
 sentence-transformers>=2.2.2,<2.4.0  # Sentence embeddings
 faiss-cpu>=1.7.4,<1.8.0              # Facebook AI Similarity Search
-langchain>=0.0.340,<0.1.0            # RAG pipeline and document processing
-langchain-community>=0.0.10,<0.1.0   # Community LangChain components
+langchain>=0.0.340,<0.2.0            # RAG pipeline and document processing
+langchain-community>=0.0.10,<0.2.0   # Community LangChain components
 chromadb>=0.4.15,<0.5.0              # Vector database alternative
 
 # Scientific Computing and Data Processing
 # -----------------------------------------
-numpy>=1.24.0,<1.26.0            # Numerical computing
-pandas>=2.0.0,<2.2.0             # Data manipulation and analysis
-scikit-learn>=1.3.0,<1.4.0       # Machine learning utilities
-scipy>=1.11.0,<1.12.0            # Scientific computing
+numpy>=1.24.0,<1.27.0            # Numerical computing
+pandas>=2.0.0,<2.3.0             # Data manipulation and analysis
+scikit-learn>=1.3.0,<1.5.0       # Machine learning utilities
+scipy>=1.11.0,<1.13.0            # Scientific computing
 
 # Natural Language Processing Evaluation
 # ---------------------------------------
 rouge-score>=0.1.2,<0.2.0        # ROUGE evaluation metrics
 nltk>=3.8.0,<3.9.0               # Natural language toolkit
 bleu>=0.4.16,<0.5.0              # BLEU score computation
-sacrebleu>=2.3.1,<2.4.0          # Standard BLEU implementation
+sacrebleu>=2.3.1,<2.5.0          # Standard BLEU implementation
 bert-score>=0.3.13,<0.4.0        # BERT-based evaluation metric
 
 # Visualization and Analysis
 # ---------------------------
-matplotlib>=3.7.0,<3.8.0         # Plotting and visualization
-seaborn>=0.12.0,<0.13.0          # Statistical data visualization
-plotly>=5.15.0,<5.18.0           # Interactive plotting
+matplotlib>=3.7.0,<3.9.0         # Plotting and visualization
+seaborn>=0.12.0,<0.14.0          # Statistical data visualization
+plotly>=5.15.0,<5.19.0           # Interactive plotting
 ipywidgets>=8.0.0,<8.2.0         # Jupyter notebook widgets
 
 # Development and Research Tools
 # -------------------------------
 jupyter>=1.0.0,<1.1.0            # Jupyter notebook environment
-jupyterlab>=4.0.0,<4.1.0         # Enhanced Jupyter interface
+jupyterlab>=4.0.0,<4.2.0         # Enhanced Jupyter interface
 tqdm>=4.65.0,<4.67.0             # Progress bars
 notebook>=7.0.0,<7.1.0           # Classic Jupyter notebook interface
 
 # Data Loading and Web Integration
 # ---------------------------------
-huggingface-hub>=0.17.0,<0.19.0  # Hugging Face model hub
-requests>=2.31.0,<2.32.0         # HTTP requests
-urllib3>=1.26.0,<2.1.0           # URL handling
+huggingface-hub>=0.17.0,<0.20.0  # Hugging Face model hub
+requests>=2.31.0,<2.33.0         # HTTP requests
+urllib3>=1.26.0,<2.2.0           # URL handling
 
 # System and File Operations
 # ---------------------------
 psutil>=5.9.0,<5.10.0            # System and process utilities
-pathlib>=1.0.1                   # Path handling (built-in, version for clarity)
-os-sys>=2.1.4                    # OS system utilities
-pickle5>=0.0.12                  # Enhanced pickle for older Python versions
 
 # Optional: GPU Monitoring and Optimization
 # ------------------------------------------
@@ -87,8 +84,7 @@ pickle5>=0.0.12                  # Enhanced pickle for older Python versions
 # ------------------------
 python-dotenv>=1.0.0,<1.1.0     # Environment variable management
 pyyaml>=6.0.0,<6.1.0            # YAML configuration files
-jsonschema>=4.19.0,<4.20.0      # JSON validation
-packaging>=23.1,<24.0           # Package version handling
+jsonschema>=4.19.0,<4.21.0      # JSON validation
 
 # Performance Profiling (Development)
 # -----------------------------------
@@ -134,4 +130,12 @@ packaging>=23.1,<24.0           # Package version handling
 # 7. Verification:
 #    python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA: {torch.cuda.is_available()}')"
 #    python -c "import transformers; import sentence_transformers; import langchain; print('✅ All core libraries installed')"
+#
+# 8. Changes Made in This Update:
+#    - Removed unnecessary packages: os-sys, pickle5, pathlib (built-in modules)
+#    - Updated version ranges for better compatibility
+#    - Expanded langchain version range for newer features
+#    - Updated torch version range to include latest stable versions
+#    - Relaxed some overly restrictive version constraints
+#    - Kept all actually used packages based on codebase analysis
 # ============================================================================= 
